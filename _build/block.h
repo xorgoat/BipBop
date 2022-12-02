@@ -4,44 +4,45 @@
 #define BLOCK_H_
 
 #include "raylib.h"
+#include <vector>
+using namespace std;
 
 class Block {
 private:
 	Vector2 blockPosition;
 	//Vector2 brickSize;
-	//int integrity;
+	int integrity;
 public:
-	Block(Vector2 brickPosition);
+	Block(Vector2 blockPosition, int integrity);
 	Vector2 get_blockPosition();
+	void set_blockPosition(Vector2 newPosition);
 	//Vector2 get_brickSize();
-	//int getIntegrity();
-	//void setIntegrity(int newIntegrity);
-	
-
+	int getIntegrity();
+	void setIntegrity(int newIntegrity);
 
 };
 
-Block::Block(Vector2 blockPosition) {
+Block::Block(Vector2 blockPosition, int integrity) {
 	this->blockPosition = blockPosition;
-	//this->brickSize = brickSize;
-	//this->integrity = integrity;
+	//this->brickSize = blockSize;
+	this->integrity = 3; //change to integrity
 
 }
 
 Vector2 Block::get_blockPosition() {
 	return this->blockPosition;
 }
-/*Vector2 Bricks::get_brickSize() {
-	return this->brickSize;
+void Block::set_blockPosition(Vector2 newPosition) {
+	this->blockPosition = newPosition;
 }
 
-int Bricks::getIntegrity() {
+int Block::getIntegrity() {
 	return this->integrity;
 }
 
-void Bricks::setIntegrity(int newIntegrity) {
+void Block::setIntegrity(int newIntegrity) {
 	this->integrity = newIntegrity;
-}*/
+}
 
 
 /*void Bricks::draw() {

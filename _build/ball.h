@@ -4,6 +4,7 @@
 
 #include "raylib.h"
 #include "paddle.h"
+#include "timer.h"
 
 class Ball {
 private:
@@ -46,8 +47,8 @@ void Ball::set_ballPosition(Vector2 newPosition) {
 }
 
 void Ball::move() {
-	ballPosition.x -= ballSpeed.x;
-	ballPosition.y -= ballSpeed.y;
+	ballPosition.x += ballSpeed.x;
+	ballPosition.y += ballSpeed.y;
 	
 }
 
@@ -55,29 +56,27 @@ void Ball::draw() {
 	DrawCircleV(ballPosition, ballSize, MAROON);
 }
 
-
+// Checks walls collision for bouncing
 void Ball::collision() {
-    // Check walls collision for bouncing
-    
 	if (life == 0) {
-		DrawText("Game Overrr", 10, 480 - 25, 20, RED);
-		ballSpeed = { 0, 0 };
-		//ball->set_ballSpeed(ballSpeed);
+		DrawText("Game Overrr", 10, 480 - 40, 20, RED);
+		ballSpeed = { 0, 0 }; //Stops the ball to end the game
 	}
-
 	if ((ballPosition.x >= (GetScreenWidth() - ballSize)) || (ballPosition.x <= ballSize)) {
         ballSpeed.x *= -1.0f;
     }
     if ((ballPosition.y <= ballSize)) {
         ballSpeed.y *= -1.0f;
-    }
+    } 
+	//Ball goes below the screen
     if ((ballPosition.y >= (GetScreenHeight() - ballSize))) {
         life--;
         //resets the ball
         ballPosition = { GetScreenWidth() / 2.0f, GetScreenHeight() / 2.0f };
-        ballSpeed = { 4.0f, 3.0f };
+        ballSpeed = { 2.0f, -3.0f };
     }
-	DrawText(TextFormat("Lives: %0i", life), 10, 10, 20, GREEN);
+	//Displays the umber of lives on the screen
+	DrawText(TextFormat("Lives: %0i", life), 10, 5, 20, GREEN);  
 }
 
 

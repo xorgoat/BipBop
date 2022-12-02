@@ -1,5 +1,9 @@
 ﻿  Game.cpp
-C:\Users\arice\OneDrive\Desktop\BipBop\_build\ball.h(55,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\arice\OneDrive\Desktop\BipBop\_build\Game.cpp(37,81): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
-C:\Users\arice\OneDrive\Desktop\BipBop\_build\Game.cpp(37,81): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\arice\OneDrive\Desktop\BipBop\_build\ball.h(56,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\arice\OneDrive\Desktop\BipBop\_build\Game.cpp(27,59): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
+C:\Users\arice\OneDrive\Desktop\BipBop\_build\Game.cpp(27,59): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\arice\OneDrive\Desktop\BipBop\_build\Game.cpp(27,99): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
+C:\Users\arice\OneDrive\Desktop\BipBop\_build\Game.cpp(27,99): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\arice\OneDrive\Desktop\BipBop\_build\Game.cpp(32,79): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\arice\OneDrive\Desktop\BipBop\_build\Game.cpp(32,79): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   BipBop.vcxproj -> C:\Users\arice\OneDrive\Desktop\BipBop\_bin\Debug\BipBop.exe
